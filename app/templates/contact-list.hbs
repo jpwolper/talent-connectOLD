@@ -1,0 +1,25 @@
+<div class="jumbo">
+  <div class="right tomster"></div>
+  <h2>Sacks Talent Agency, LLC</h2>
+  <p>
+    Premier independent acting agency with an industry-leading list of both industry contacts and actors.
+  </p>
+  <p>
+    (213) 398-0334
+  </p>
+</div>
+{{#each model as |contactListing|}}
+  {{contact-listing contact=contactListing}}
+{{!-- {{#each model as |contact|}}
+  <article class="listing">
+    <h3>{{contact.fn}} {{contact.ln}}</h3>
+    <div class="detail email">
+      <span>Email:</span> {{contact.email}}
+    </div>
+    <div class="detail phone">
+      <span>Phone:</span> {{contact.p}}
+    </div>
+  </article> --}}
+{{/each}}
+
+{{outlet}}
